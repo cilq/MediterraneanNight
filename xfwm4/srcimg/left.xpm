@@ -1,5 +1,6 @@
-/* XPM */
-static char * left_xpm[] = {
-"1 1 1 1",
-"#  c #585858",
-"#"};
+/* XPM */ 
+static const unsigned char * left_xpm[] = {
+"1 1 2 1",
+" 	c None",
+"!	c #638DBD",
+"!"};
