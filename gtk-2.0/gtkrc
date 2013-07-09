@@ -1,10 +1,10 @@
-gtk-color-scheme = "base_color:#D8D8D8\nbg_color:#C6C6C6"
-gtk-color-scheme = "text_color:#161616\nfg_color:#242424"
-gtk-color-scheme = "selected_bg_color:#4a6787\nselected_fg_color:#ffffff"
+gtk-color-scheme = "base_color:#FCFCFC\nbg_color:#EAEAEA"
+gtk-color-scheme = "text_color:#282828\nfg_color:#323232"
+gtk-color-scheme = "selected_bg_color:#4D6E92\nselected_fg_color:#ffffff"
 gtk-color-scheme = "tooltip_bg_color:#080808\ntooltip_fg_color:#ffffff\nlink_color:#4a90f9"
 
 gtk-color-scheme = "theme_bg_dark_color:#626262\ntheme_fg_dark_color:#E4E4E4\ntheme_text_dark_color:#F5F5F5"
-gtk-color-scheme = "sidebar_background:#afb8bf"
+gtk-color-scheme = "sidebar_background:#d5dade"
 
 # link_color:#4a90f9"
 gtk-auto-mnemonics	= 1
@@ -190,7 +190,7 @@ style "wider" {
 	ythickness	= 3
 }
 
-style "button"  {
+style "button" {
     xthickness	= 3
     ythickness	= 3
 
@@ -204,26 +204,23 @@ style "button"  {
 
 	engine "murrine" {
 		contrast                = 0.85
+		roundness				= 2
 		gradient_shades         = {1.15,1.07,1.08,1.05}
 		border_shades			= {1.10, 0.95}
+
 		lightborderstyle		= 1 # 0 = top side, 1 = all sides
-		lightborder_shade       = 1.1
+		lightborder_shade       = 1.3
         highlight_shade			= 1.03
-		roundness				= 2
 		focusstyle				= 0		
 		glowstyle				= 0 # 0 = top, 1 = bottom, 2 = top and bottom, 3 = horizontal, 4 = centered glow
-        glow_shade              = 1.25
+        glow_shade              = 1.45
         reliefstyle             = 3
 		textstyle               = 1
-		text_shade				= 1.15     
+		text_shade			    = 1.2
 	}
 }
 
 style "button_label" {
-	#fg[ACTIVE]			= "#fff"
-	#fg[SELECTED]		= "#fff"
-	#text[ACTIVE]		= "#fff"
-	#text[SELECTED]		= "#fff"
 }
 
 style "checkradio_label" {	
@@ -426,7 +423,7 @@ style "entry" = "default" { # text
 
 style "toolbar_entry" = "entry" { # text
 
-	base[NORMAL]			= shade(0.93, @base_color)
+	base[NORMAL]			= shade(0.93, @bg_color)
 	engine "murrine" {
 		contrast			= 0.6
 		border_shades		= {1.2, 1.0}
@@ -558,7 +555,6 @@ style "notebook" {
 	}
 }
 
-
 style "progressbar" {
 	xthickness	= 0
 	ythickness	= 0
@@ -566,7 +562,7 @@ style "progressbar" {
 	bg[SELECTED]		=  mix   (0.80, @selected_bg_color, @bg_color)	# Pulsado
 
 	engine "murrine" {
-		gradient_shades		= {0.90, 1.10, 1.10, 1.15}
+		gradient_shades		= {0.90, 1.13, 1.13, 1.18}
         border_shades		= {0.8, 1.4}
 		roundness			= 2
 		glowstyle				= 1 # 0 = top, 1 = bottom, 2 = top and bottom, 3 = horizontal, 4 = centered glow
@@ -674,8 +670,8 @@ style "toolbar" = "wider" {
 	engine "murrine" {
 		separatorstyle          = 0
 		lightborderstyle        = 0		
-		contrast                = 1.0       # Regula el contraste del borde inferior de la toolbar
-		lightborder_shade		= 1.0       # Regula el contraste del borde de la toolbar
+		contrast                = 1.0       # Regula el contraste del borde de toolbar
+		lightborder_shade		= 1.0       # Regula higlight 3D del borde de toolbar
         gradient_shades     	= {0.97, 1.00, 1.00, 1.00}        
 	}
 }
@@ -700,6 +696,7 @@ style "toolbar_button" {
 		textstyle               = 1
 		text_shade			    = 1.15
 	}
+
 }
 
 # toolbar separator
@@ -707,13 +704,14 @@ style "toolbar_separator" {
 	xthickness = 0
   	ythickness = 0
 
-	bg[NORMAL]	    = shade (0.80, @bg_color)
+	bg[NORMAL]	    = shade (0.80, @theme_bg_dark_color)
 	engine "murrine" {
 		border_shades           = {0.80, 0.80}
 		contrast                = 0.3
 		lightborder_shade       = 1.1
 	}
 }
+
 
 style "tooltips" {
 	xthickness	= 8
@@ -735,7 +733,7 @@ style "treeview" {
 
 	fg[NORMAL]		= shade (1.00, @fg_color)				# header txt color
 
-	bg[SELECTED]	= shade (1.40, @selected_bg_color)		# backgr mini-checkbox checked
+	bg[SELECTED]	= shade (1.20, @selected_bg_color)		# backgr mini-checkbox checked
 	text[NORMAL]    = shade (1.05, @fg_color)				# txt+indicador checked normal
 	text[SELECTED]  = @selected_fg_color					# txt+indicador selected focused
 	text[ACTIVE] 	= @selected_fg_color					# txt+indicador selected unfocused
@@ -770,13 +768,12 @@ style "treeview_header" = "button" {
 	}
 }
 
-
 style "checkradio"  {
     xthickness	= 3
     ythickness	= 3
 
 	base[NORMAL]					= shade (1.02, @bg_color)			# radiocheck normal
-	bg[SELECTED]    			    = shade (1.00, @bg_color)	# radiocheck color checked
+	bg[SELECTED]    			    = shade (1.00, @bg_color)			# radiocheck color checked
 
     bg[ACTIVE]                      = shade (0.90, @bg_color)			# button option selected
     bg[NORMAL]                      = shade (0.91, @bg_color)
@@ -844,14 +841,13 @@ widget_class "*<OsThumb>" 		style "overlay_scrollbar"
 # General matching follows. The order is choosen so that the right styles override
 # each other. EG. progressbar needs to be more important than the menu match.
 widget_class "*<GtkButton>"			    style "button"
-widget_class "*<GtkButton>*<GtkLabel>"  style "button_label"
+#widget_class "*<GtkButton>*<GtkLabel>"  style "button_label"
 
 widget_class "*<GtkNotebook>"			style "notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"        style "notebook"
 widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "notebook"
 widget_class "*<GtkNotebook>*<GtkNotebookPage>" style "notebook"
-
 
 widget_class "*<GtkMenuBar>*"			style "menubar"
 widget_class "*<GtkMenu>*"			    style "menu"
@@ -861,8 +857,13 @@ widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menubar_menuitem"
 
 widget_class "*<GtkToolbar>"                    style "toolbar"
 widget_class "*<GtkHandleBox>"                  style "toolbar"
+class "*HandleBox"                              style "toolbar"
+widget_class "*HandleBox"                       style "toolbar"
 widget_class "*<GtkToolbar>.*.<GtkButton>*"     style "toolbar_button"
-widget_class "*<GtkToolbar>.*.<GtkEntry>*"     style "toolbar_entry"
+widget_class "*<GtkHandleBox>.*.<GtkButton>*"   style "toolbar_button"
+class "*HandleBox.*.<GtkButton>*"               style "toolbar_button"
+widget_class "*HandleBox.*.<GtkButton>*"        style "toolbar_button"
+widget_class "*<GtkToolbar>.*.<GtkEntry>*"      style "toolbar_entry"
 class "GtkSeparatorToolItem"		            style "toolbar_separator"
 
 widget_class "*.<GtkFrame>.<GtkLabel>"			style "frame_title"
@@ -896,13 +897,13 @@ widget "gtk-tooltip*"							style "tooltips"
 ##########################################################################
 
 widget_class "*<GtkCheckButton>*" 					style		  "checkbutton"
-widget_class "*<GtkCheckButton>*<GtkLabel>"			style:highest "checkradio_label"
+widget_class "*<GtkCheckButton>*<GtkLabel>"		    style:highest "checkradio_label"
 
 widget_class "*<GtkRadioButton>*"					style 		  "checkradio"
 widget_class "*<GtkDialog>*<GtkRadioButton>*"		style:highest "radiobutton"
 widget_class "*<GtkFrame>*<GtkRadioButton>*" 		style:highest "radiobutton"
 widget_class "*<GtkNotebook>*<GtkRadioButton>*" 	style:highest "radiobutton"
-widget_class "*<GtkRadioButton>*<GtkLabel>"			style:highest "checkradio_label"
+widget_class "*<GtkRadioButton>*<GtkLabel>"		style:highest "checkradio_label"
 
 
 ##########################################################################
@@ -937,18 +938,18 @@ style "text_is_fg_color_workaround" {
 	text[PRELIGHT]		= @fg_color
 	text[SELECTED]		= @selected_fg_color
 	text[ACTIVE]		= @fg_color
-	text[INSENSITIVE]	= darker (@bg_color)
+	text[INSENSITIVE]	= mix(0.65, @fg_color, @bg_color)
 }
 widget_class "*.<GtkComboBox>.<GtkCellView>"	style "text_is_fg_color_workaround"
 
 # For menus where the text color is used instead of the fg color.
 style "menuitem_text_is_fg_color_workaround" {
 
-	text[NORMAL]		= shade (0.97, @base_color)
+	text[NORMAL]		= @theme_fg_dark_color
 	text[PRELIGHT]		= @selected_fg_color
 	text[SELECTED]		= @selected_fg_color
-	text[ACTIVE]		= @fg_color
-	text[INSENSITIVE]	= darker (@bg_color)
+	text[ACTIVE]		= @theme_fg_dark_color
+	text[INSENSITIVE]	= mix(0.65, @theme_fg_dark_color, @theme_bg_dark_color)
 }
 widget "*.gtk-combobox-popup-menu.*"	style "menuitem_text_is_fg_color_workaround"
 
@@ -958,7 +959,7 @@ style "fg_is_text_color_workaround" {
 	fg[PRELIGHT]	= @text_color
 	fg[SELECTED]	= @selected_fg_color
 	fg[ACTIVE]		= @selected_fg_color
-	fg[INSENSITIVE] = darker (@bg_color)
+	fg[INSENSITIVE] = mix(0.65, @fg_color, @bg_color)
 }
 widget_class "*<GtkListItem>*"		style "fg_is_text_color_workaround"
 widget_class "*<GtkCList>"		    style "fg_is_text_color_workaround"
