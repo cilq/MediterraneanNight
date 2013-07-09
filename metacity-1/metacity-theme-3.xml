@@ -169,9 +169,8 @@
 	</gradient>
 
     <image filename="metacity-noise.png" x="0" y="0" width="object_width" height="object_height"/>
-
-    <line x1="0" y1="top_height-1" x2="width" y2="top_height-1" color="shade/gtk:custom(theme_bg_dark_color,gtk:bg[NORMAL])/0.80" />
 <!--
+    <line x1="0" y1="top_height-1" x2="width" y2="top_height-1" color="shade/gtk:custom(theme_bg_dark_color,gtk:bg[NORMAL])/0.80" />
 -->
 </draw_ops>
 
