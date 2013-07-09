@@ -72,11 +72,11 @@
     <linearGradient
        id="linearGradient3786">
       <stop
-         style="stop-color:#65696d;stop-opacity:1;"
+         style="stop-color:#5c6876;stop-opacity:1;"
          offset="0"
          id="stop3788" />
       <stop
-         style="stop-color:#707070;stop-opacity:0.43137255;"
+         style="stop-color:#797979;stop-opacity:0.29940119;"
          offset="1"
          id="stop3790" />
     </linearGradient>
@@ -105,26 +105,26 @@
     <linearGradient
        id="linearGradient3769">
       <stop
-         style="stop-color:#e1e1e1;stop-opacity:1;"
+         style="stop-color:#fdfdfd;stop-opacity:1;"
          offset="0"
          id="stop3771" />
       <stop
-         style="stop-color:#c3c3c3;stop-opacity:1;"
+         style="stop-color:#e0e0e0;stop-opacity:1;"
          offset="1"
          id="stop3773" />
     </linearGradient>
     <linearGradient
        id="linearGradient3759">
       <stop
-         style="stop-color:#718fb1;stop-opacity:1;"
+         style="stop-color:#85a2cf;stop-opacity:1;"
          offset="0"
          id="stop3761" />
       <stop
          id="stop3812"
          offset="0.6249997"
-         style="stop-color:#517195;stop-opacity:1;" />
+         style="stop-color:#678bc3;stop-opacity:1;" />
       <stop
-         style="stop-color:#435e7b;stop-opacity:1;"
+         style="stop-color:#436cab;stop-opacity:1;"
          offset="1"
          id="stop3763" />
     </linearGradient>
@@ -317,7 +317,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="13.810607"
-     inkscape:cx="18.235617"
+     inkscape:cx="6.6423269"
      inkscape:cy="9.5885927"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -325,8 +325,8 @@
      showguides="false"
      inkscape:window-width="1300"
      inkscape:window-height="917"
-     inkscape:window-x="620"
-     inkscape:window-y="88"
+     inkscape:window-x="603"
+     inkscape:window-y="37"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"

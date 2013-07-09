@@ -1,10 +1,10 @@
-gtk-color-scheme = "base_color:#D8D8D8\nbg_color:#C6C6C6"
-gtk-color-scheme = "text_color:#161616\nfg_color:#242424"
-gtk-color-scheme = "selected_bg_color:#4a6787\nselected_fg_color:#ffffff"
+gtk-color-scheme = "base_color:#FCFCFC\nbg_color:#EAEAEA"
+gtk-color-scheme = "text_color:#282828\nfg_color:#363636"
+gtk-color-scheme = "selected_bg_color:#507fc5\nselected_fg_color:#fbfbfb"
 gtk-color-scheme = "tooltip_bg_color:#080808\ntooltip_fg_color:#ffffff\nlink_color:#4a90f9"
 
-gtk-color-scheme = "theme_bg_dark_color:#626262\ntheme_fg_dark_color:#E4E4E4\ntheme_text_dark_color:#F5F5F5"
-gtk-color-scheme = "sidebar_background:#afb8bf"
+gtk-color-scheme = "theme_bg_dark_color:#ceac74\ntheme_fg_dark_color:#363636\ntheme_text_dark_color:#282828"
+gtk-color-scheme = "sidebar_background:#EFF2F3"
 
 # link_color:#4a90f9"
 gtk-auto-mnemonics	= 1
@@ -89,25 +89,26 @@ style "default" {
 	bg[NORMAL]          = @bg_color
 	bg[PRELIGHT]		= shade (1.02, @bg_color)
 	bg[SELECTED]		= @selected_bg_color
-	bg[INSENSITIVE] 	= shade (0.97, @bg_color)
+	bg[INSENSITIVE] 	= shade (0.85, @base_color)
 	bg[ACTIVE]          = @bg_color
 
 	fg[NORMAL]          = @fg_color
 	fg[PRELIGHT]		= @text_color
 	fg[SELECTED]		= @selected_fg_color
-	fg[INSENSITIVE] 	= mix (0.60, @fg_color, @bg_color)
+	fg[INSENSITIVE] 	= darker (@bg_color)	
 	fg[ACTIVE]			= @text_color
+	#fg[ACTIVE]			= @text_color
 
 	text[NORMAL]		= @text_color
 	text[PRELIGHT]		= @text_color
 	text[SELECTED]		= @selected_fg_color
-	text[INSENSITIVE]	= mix (0.60, @text_color, @bg_color)	
+	text[INSENSITIVE]	= darker (@bg_color)
 	text[ACTIVE]		= @text_color
 
 	base[NORMAL]		= @base_color
-	base[PRELIGHT]		= shade (1.02, @bg_color)
+	base[PRELIGHT]		= shade (0.95, @bg_color)
 	base[SELECTED]		= @selected_bg_color
-	base[INSENSITIVE]	= shade (0.97, @base_color)
+	base[INSENSITIVE]	= shade (0.85, @base_color)
 	base[ACTIVE]		= @selected_bg_color
 
 	engine "murrine" {
@@ -196,7 +197,7 @@ style "button"  {
 
     bg[NORMAL]              = shade (0.86, @base_color)
     bg[PRELIGHT]            = shade (0.885, @base_color)    
-	bg[ACTIVE]              = shade (1.35, @selected_bg_color)	# Pulsado
+	bg[ACTIVE]              = mix   (0.85, @selected_bg_color, @bg_color)	# Pulsado
 	bg[SELECTED]            = shade (1.00, @selected_bg_color)	# 
 	bg[INSENSITIVE]         = shade (0.95, @bg_color)
 
@@ -204,18 +205,19 @@ style "button"  {
 
 	engine "murrine" {
 		contrast                = 0.85
+		roundness				= 2
 		gradient_shades         = {1.15,1.07,1.08,1.05}
 		border_shades			= {1.10, 0.95}
+
 		lightborderstyle		= 1 # 0 = top side, 1 = all sides
-		lightborder_shade       = 1.1
+		lightborder_shade       = 1.3
         highlight_shade			= 1.03
-		roundness				= 2
 		focusstyle				= 0		
 		glowstyle				= 0 # 0 = top, 1 = bottom, 2 = top and bottom, 3 = horizontal, 4 = centered glow
-        glow_shade              = 1.25
+        glow_shade              = 1.45
         reliefstyle             = 3
 		textstyle               = 1
-		text_shade				= 1.15     
+		text_shade				= 1.15
 	}
 }
 
@@ -426,10 +428,10 @@ style "entry" = "default" { # text
 
 style "toolbar_entry" = "entry" { # text
 
-	base[NORMAL]			= shade(0.93, @base_color)
+	base[NORMAL]			= shade(0.93, @bg_color)
 	engine "murrine" {
-		contrast			= 0.6
-		border_shades		= {1.2, 1.0}
+		contrast			= 1.0
+		border_shades		= {1.1, 1.0}
 		focus_color 		= shade (1.0, @selected_bg_color)
 	}
 }
@@ -462,19 +464,16 @@ style "menubar" {
 	ythickness	= 0
 
     fg[NORMAL]          = @theme_fg_dark_color
-	fg[PRELIGHT]	    = @selected_fg_color
-	fg[ACTIVE]	        = @selected_fg_color
-	fg[SELECTED]	    = @selected_fg_color
+	fg[PRELIGHT]	    = @theme_fg_dark_color
+	fg[ACTIVE]	        = @theme_fg_dark_color
+	fg[SELECTED]	    = @theme_fg_dark_color
 
     bg[NORMAL]          = shade (1.00, @theme_bg_dark_color)
     
 	engine "murrine" {
-		gradient_shades     	= {1.00,0.97,0.97,0.94}
-        border_shades 			= {1.1, 0.9}
-		contrast            	= 1.15
-		lightborderstyle		= 1
-		textstyle               = 1
-		text_shade				= 0.8
+		gradient_shades     	= {1.00, 1.00, 1.00, 1.00}
+        contrast            	= 0.5
+
 	}
 }
 
@@ -483,10 +482,10 @@ style "menu" {
 	ythickness	= 0
 	GtkMenuItem::arrow-scaling	= 0.5
 
-	bg[NORMAL]			= shade (0.90, @theme_bg_dark_color)
+	bg[NORMAL]			= mix(0.88, @base_color, @theme_bg_dark_color)
 
 	engine "murrine" {
-		gradient_shades		= {1.00, 1.0, 1.0, 1.00}
+		gradient_shades		= {1.0, 1.0, 1.0, 1.0}
 		roundness		    = 1 # 0 = squared 
 	}
 }
@@ -495,23 +494,24 @@ style "menu_item_white" {
 	xthickness	= 2
 	ythickness	= 3
 
+	fg[NORMAL] 			= shade (1.00, @fg_color)		    # menu item normal
+    fg[INSENSITIVE] 	= mix(0.40, @bg_color, @fg_color)	# menu item deshabilitados
+	fg[PRELIGHT]		= @selected_fg_color				# menu item seleccionado
+
+	text[NORMAL]        = shade (1.00, @fg_color)		    # Color check/radio menu
+	text[INSENSITIVE] 	= mix(0.40, @bg_color, @fg_color)	# Color check/radio menu
+	text[PRELIGHT]      = @selected_fg_color            	# Color check/radio menu
+
     bg[PRELIGHT]      	= shade (1.00, @selected_bg_color)
     bg[SELECTED]      	= shade (1.00, @selected_bg_color)
-
-	fg[NORMAL] 			= shade (1.00, @theme_fg_dark_color)		# menu item normal
-    fg[INSENSITIVE] 	= mix(0.60, @theme_fg_dark_color, @theme_bg_dark_color)	    # menu item deshabilitados
-	fg[PRELIGHT]		= @selected_fg_color						# menu item seleccionado
-
-	text[NORMAL]        = shade (0.94, @theme_fg_dark_color)		# Color check/radio menu
-	text[INSENSITIVE] 	= mix(0.60, @theme_text_dark_color, @theme_bg_dark_color)	    
-	text[PRELIGHT]      = @selected_fg_color            			# Color check/radio menu
 
 	engine "murrine" {
         gradient_shades		= {0.90, 0.95, 0.95, 1.00}
 		border_shades 		= {1.40, 1.0}
         roundness           = 1
         contrast            = 0.8           # Contraste separadores
-		textstyle               = 0
+		#textstyle           = 1
+		#text_shade			= 1.2
 	}
 }
 
@@ -519,16 +519,21 @@ style "menubar_menuitem" {
 	xthickness	= 2
 	ythickness	= 3
 
-    bg[NORMAL]          = shade (1.00, @theme_bg_dark_color)
-    bg[SELECTED]      	= shade (1.00, @selected_bg_color)
+    fg[NORMAL]          = @fg_color
+	fg[PRELIGHT]	    = @fg_color
+	fg[ACTIVE]	        = @fg_color
+	fg[SELECTED]	    = @fg_color
 
-	fg[NORMAL] 			= shade (1.00, @theme_fg_dark_color)		# menu item normal
-    fg[INSENSITIVE] 	= mix(0.60, @theme_fg_dark_color, @theme_bg_dark_color)	    # menu item deshabilitados
-	fg[PRELIGHT]		= @selected_fg_color						# menu item seleccionado
+    bg[SELECTED]      	= mix(0.88, @base_color, @theme_bg_dark_color)
+    bg[PRELIGHT]      	= mix(0.88, @base_color, @theme_bg_dark_color)
 
 	engine "murrine" {
-		textstyle               = 1
-		text_shade			    = 0.5
+        gradient_shades		= {1.01, 1.00, 1.00, 1.00}
+		border_shades 		= {1.6, 1.6}
+        roundness           = 2
+        contrast            = 0.0           # Contraste separadores
+		textstyle           = 1
+		text_shade			= 1.1
 	}
 }
 
@@ -558,22 +563,20 @@ style "notebook" {
 	}
 }
 
-
 style "progressbar" {
 	xthickness	= 0
 	ythickness	= 0
 
-	bg[SELECTED]		=  mix   (0.80, @selected_bg_color, @bg_color)	# Pulsado
+	bg[SELECTED]		=  mix   (0.85, @selected_bg_color, @bg_color)	# Pulsado
 
 	engine "murrine" {
-		gradient_shades		= {0.90, 1.10, 1.10, 1.15}
+		gradient_shades		= {0.93, 1.15, 1.15, 1.18}
         border_shades		= {0.8, 1.4}
 		roundness			= 2
 		glowstyle				= 1 # 0 = top, 1 = bottom, 2 = top and bottom, 3 = horizontal, 4 = centered glow
         glow_shade              = 1.20
 	}
 }
-
 
 style "scale" { # slider
 
@@ -585,7 +588,7 @@ style "scale" { # slider
 	xthickness	= 2
 	ythickness	= 2
 
-	bg[SELECTED]            = shade (1.20, @selected_bg_color)
+	bg[SELECTED]            = shade (1.10, @selected_bg_color)
 
 	engine "murrine" {
 		sliderstyle			= 2 						# forma del slider
@@ -668,15 +671,18 @@ style "spinbutton" = "button" { # input/stepper
 }
 
 style "toolbar" = "wider" {
-    bg[NORMAL]		= shade(0.97, @bg_color)
-	fg[ACTIVE]		= @text_color
+	#bg[NORMAL]		= shade(1.37, mix (0.75, @theme_bg_dark_color, @sidebar_background))
+    bg[NORMAL]		= shade(1.00, @theme_bg_dark_color)
+	fg[ACTIVE]		= @theme_text_dark_color
 
 	engine "murrine" {
 		separatorstyle          = 0
 		lightborderstyle        = 0		
-		contrast                = 1.0       # Regula el contraste del borde inferior de la toolbar
+		contrast                = 0.9       # Regula el contraste del borde inferior de la toolbar
 		lightborder_shade		= 1.0       # Regula el contraste del borde de la toolbar
-        gradient_shades     	= {0.97, 1.00, 1.00, 1.00}        
+		# contrast                = 1.1       # Regula el contraste del borde inferior de la toolbar
+		# lightborder_shade		= 1.0       # Regula el contraste del borde de la toolbar
+        gradient_shades     	= {1.00,0.98,0.98,0.95}        
 	}
 }
 
@@ -684,11 +690,15 @@ style "toolbar_button" {
     xthickness	= 3
     ythickness	= 2
 
-	bg[NORMAL]		= shade(0.90, @bg_color)
-    bg[PRELIGHT] 	= shade(0.91, @bg_color)
-    bg[ACTIVE] 		= shade(0.76, @bg_color)
-	bg[SELECTED] 	= shade(0.80, @bg_color)
-	bg[INSENSITIVE] = shade(0.83, @bg_color)
+	bg[NORMAL]		= shade(0.90, @theme_bg_dark_color)
+    bg[PRELIGHT] 	= shade(0.91, @theme_bg_dark_color)
+    bg[ACTIVE] 		= shade(0.76, @theme_bg_dark_color)
+	bg[SELECTED] 	= shade(0.80, @theme_bg_dark_color)
+	bg[INSENSITIVE] = shade(0.83, @theme_bg_dark_color)
+	fg[NORMAL]		= @theme_fg_dark_color
+	fg[ACTIVE]		= @theme_text_dark_color
+	fg[PRELIGHT]	= @theme_text_dark_color
+	fg[INSENSITIVE]	= mix(0.65, @theme_fg_dark_color, @theme_bg_dark_color)
 
 	engine "murrine" {
 		gradient_shades     	= {1.00,0.96,0.96,0.90}
@@ -698,8 +708,9 @@ style "toolbar_button" {
 		lightborder_shade       = 1.1
         glow_shade              = 1.0
 		textstyle               = 1
-		text_shade			    = 1.15
+		text_shade				= 1.15
 	}
+
 }
 
 # toolbar separator
@@ -707,7 +718,7 @@ style "toolbar_separator" {
 	xthickness = 0
   	ythickness = 0
 
-	bg[NORMAL]	    = shade (0.80, @bg_color)
+	bg[NORMAL]	    = shade (0.80, @theme_bg_dark_color)
 	engine "murrine" {
 		border_shades           = {0.80, 0.80}
 		contrast                = 0.3
@@ -735,7 +746,7 @@ style "treeview" {
 
 	fg[NORMAL]		= shade (1.00, @fg_color)				# header txt color
 
-	bg[SELECTED]	= shade (1.40, @selected_bg_color)		# backgr mini-checkbox checked
+	bg[SELECTED]	= shade (1.10, @selected_bg_color)		# backgr mini-checkbox checked
 	text[NORMAL]    = shade (1.05, @fg_color)				# txt+indicador checked normal
 	text[SELECTED]  = @selected_fg_color					# txt+indicador selected focused
 	text[ACTIVE] 	= @selected_fg_color					# txt+indicador selected unfocused
@@ -763,7 +774,7 @@ style "treeview_header" = "button" {
         lightborderstyle		= 1
 		roundness				= 0
 		textstyle				= 1
-		text_shade			    = 1.15
+		text_shade				= 1.15
         glow_shade              = 1.0
 		prelight_shade			= 1.9
 
@@ -858,6 +869,7 @@ widget_class "*<GtkMenu>*"			    style "menu"
 widget_class "*<GtkMenuItem>*"			style "menu_item_white"
 #widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menu_item_white"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menubar_menuitem"
+widget_class "*<GtkMenuBar>*<GtkMenuItem>*" style "menubar_menuitem"
 
 widget_class "*<GtkToolbar>"                    style "toolbar"
 widget_class "*<GtkHandleBox>"                  style "toolbar"
@@ -896,13 +908,13 @@ widget "gtk-tooltip*"							style "tooltips"
 ##########################################################################
 
 widget_class "*<GtkCheckButton>*" 					style		  "checkbutton"
-widget_class "*<GtkCheckButton>*<GtkLabel>"			style:highest "checkradio_label"
+widget_class "*<GtkCheckButton>*<GtkLabel>"		style:highest "checkradio_label"
 
 widget_class "*<GtkRadioButton>*"					style 		  "checkradio"
 widget_class "*<GtkDialog>*<GtkRadioButton>*"		style:highest "radiobutton"
 widget_class "*<GtkFrame>*<GtkRadioButton>*" 		style:highest "radiobutton"
 widget_class "*<GtkNotebook>*<GtkRadioButton>*" 	style:highest "radiobutton"
-widget_class "*<GtkRadioButton>*<GtkLabel>"			style:highest "checkradio_label"
+widget_class "*<GtkRadioButton>*<GtkLabel>"		style:highest "checkradio_label"
 
 
 ##########################################################################
@@ -950,7 +962,7 @@ style "menuitem_text_is_fg_color_workaround" {
 	text[ACTIVE]		= @fg_color
 	text[INSENSITIVE]	= darker (@bg_color)
 }
-widget "*.gtk-combobox-popup-menu.*"	style "menuitem_text_is_fg_color_workaround"
+#widget "*.gtk-combobox-popup-menu.*"	style "menuitem_text_is_fg_color_workaround"
 
 # For places where the fg color is used instead of the text color.
 style "fg_is_text_color_workaround" {
@@ -1015,6 +1027,7 @@ style "xfce-panel" {
 widget "*Xfce*Panel*"   style "xfce-panel"
 class "*Xfce*Panel*"    style "xfce-panel"
 
+
 style "xfdesktop-icon-view" {
     XfdesktopIconView::label-alpha = 0
     XfdesktopIconView::selected-label-alpha = 100
@@ -1041,6 +1054,7 @@ style "xfdesktop-icon-view" {
 }
 
 widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+
 
 # widget "xfwm4-tabwin*" style "murrine-dark"
 include "apps/thunar.rc"		# thunar especific
