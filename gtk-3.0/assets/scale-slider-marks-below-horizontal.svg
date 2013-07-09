@@ -25,15 +25,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="987"
-     inkscape:window-height="922"
+     inkscape:window-width="1110"
+     inkscape:window-height="957"
      id="namedview13"
      showgrid="true"
      inkscape:zoom="23.6"
-     inkscape:cx="9.3834536"
+     inkscape:cx="9.0338983"
      inkscape:cy="10.669109"
-     inkscape:window-x="855"
-     inkscape:window-y="51"
+     inkscape:window-x="81"
+     inkscape:window-y="54"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg5435">
     <inkscape:grid
@@ -52,19 +52,19 @@
        id="linearGradient3769">
       <stop
          offset="0"
-         style="stop-color:#afafaf;stop-opacity:1;"
+         style="stop-color:#cdcdcd;stop-opacity:1;"
          id="stop3771" />
       <stop
          id="stop3773"
-         style="stop-color:#cecece;stop-opacity:1;"
+         style="stop-color:#ececec;stop-opacity:1;"
          offset="0.55000025" />
       <stop
          id="stop3775"
-         style="stop-color:#d3d3d3;stop-opacity:1;"
+         style="stop-color:#f1f1f1;stop-opacity:1;"
          offset="0.60000026" />
       <stop
          offset="1"
-         style="stop-color:#dcdcdc;stop-opacity:1;"
+         style="stop-color:#fafafa;stop-opacity:1;"
          id="stop3777" />
     </linearGradient>
     <linearGradient
@@ -102,11 +102,11 @@
        x1="56.909">
       <stop
          id="stop4724"
-         style="stop-color:#8b8b8b;stop-opacity:1;"
+         style="stop-color:#a9a9a9;stop-opacity:1;"
          offset="0" />
       <stop
          id="stop4726"
-         style="stop-color:#737373;stop-opacity:1;"
+         style="stop-color:#919191;stop-opacity:1;"
          offset="1" />
     </linearGradient>
     <linearGradient

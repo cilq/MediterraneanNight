@@ -68,11 +68,11 @@
     <linearGradient
        id="linearGradient3786">
       <stop
-         style="stop-color:#1c1c1c;stop-opacity:0.74509805;"
+         style="stop-color:#181818;stop-opacity:0.74509805;"
          offset="0"
          id="stop3788" />
       <stop
-         style="stop-color:#343434;stop-opacity:1;"
+         style="stop-color:#202020;stop-opacity:1;"
          offset="1"
          id="stop3790" />
     </linearGradient>
@@ -101,26 +101,26 @@
     <linearGradient
        id="linearGradient3769">
       <stop
-         style="stop-color:#cdcdcd;stop-opacity:1;"
+         style="stop-color:#5c5c5c;stop-opacity:1;"
          offset="0"
          id="stop3771" />
       <stop
-         style="stop-color:#9b9b9b;stop-opacity:1;"
+         style="stop-color:#3c3c3c;stop-opacity:1;"
          offset="1"
          id="stop3773" />
     </linearGradient>
     <linearGradient
        id="linearGradient3759">
       <stop
-         style="stop-color:#505050;stop-opacity:1;"
+         style="stop-color:#323232;stop-opacity:1;"
          offset="0"
          id="stop3761" />
       <stop
          id="stop3801"
          offset="0.68748617"
-         style="stop-color:#4b4b4b;stop-opacity:1;" />
+         style="stop-color:#2d2d2d;stop-opacity:1;" />
       <stop
-         style="stop-color:#373737;stop-opacity:1;"
+         style="stop-color:#1e1e1e;stop-opacity:1;"
          offset="1"
          id="stop3763" />
     </linearGradient>
@@ -241,7 +241,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="13.810607"
-     inkscape:cx="20.857928"
+     inkscape:cx="-1.0817308"
      inkscape:cy="4.1579843"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -249,8 +249,8 @@
      showguides="false"
      inkscape:window-width="1300"
      inkscape:window-height="917"
-     inkscape:window-x="421"
-     inkscape:window-y="68"
+     inkscape:window-x="563"
+     inkscape:window-y="91"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -331,7 +331,7 @@
        sodipodi:cy="14"
        sodipodi:cx="44.5"
        id="path3764"
-       style="fill:none;stroke:#ffffff;stroke-width:0.49922532;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:0.2477876;stroke-dasharray:none"
+       style="fill:none;stroke:#ffffff;stroke-width:0.49922531999999997;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:0.10980392;stroke-dasharray:none"
        sodipodi:type="arc" />
   </g>
 </svg>
