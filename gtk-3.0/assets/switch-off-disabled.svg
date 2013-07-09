@@ -101,11 +101,11 @@
     <linearGradient
        id="linearGradient3769">
       <stop
-         style="stop-color:#d2d2d2;stop-opacity:1;"
+         style="stop-color:#ededed;stop-opacity:1;"
          offset="0"
          id="stop3771" />
       <stop
-         style="stop-color:#d2d2d2;stop-opacity:1;"
+         style="stop-color:#e6e6e6;stop-opacity:1;"
          offset="1"
          id="stop3773" />
     </linearGradient>
@@ -115,6 +115,10 @@
          style="stop-color:#b4b4b4;stop-opacity:0.47058824;"
          offset="0"
          id="stop3761" />
+      <stop
+         id="stop3792"
+         offset="0.50000042"
+         style="stop-color:#b4b4b4;stop-opacity:0.47058824;" />
       <stop
          style="stop-color:#b4b4b4;stop-opacity:0.47058824;"
          offset="1"
@@ -237,7 +241,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="13.810607"
-     inkscape:cx="25.654544"
+     inkscape:cx="28.012142"
      inkscape:cy="9.9868375"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -264,7 +268,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -302,5 +306,15 @@
        transform="matrix(2.0987442,0,0,2.3610872,-76.394117,1009.307)"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:url(#linearGradient3815);fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3810);stroke-width:0.78707629999999984;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;opacity:1"
+       id="path3807"
+       sodipodi:cx="53.5"
+       sodipodi:cy="4"
+       sodipodi:rx="2.5"
+       sodipodi:ry="3"
+       d="M 56,4 C 56,5.6568542 54.880712,7 53.5,7 52.119288,7 51,5.6568542 51,4 51,2.3431458 52.119288,1 53.5,1 54.880712,1 56,2.3431458 56,4 z"
+       transform="matrix(1.39179,0,0,1.1598254,-57.510765,1037.6729)" />
   </g>
 </svg>
