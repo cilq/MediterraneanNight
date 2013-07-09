@@ -3,7 +3,7 @@ gtk-color-scheme = "text_color:#161616\nfg_color:#242424"
 gtk-color-scheme = "selected_bg_color:#4a6787\nselected_fg_color:#ffffff"
 gtk-color-scheme = "tooltip_bg_color:#080808\ntooltip_fg_color:#ffffff\nlink_color:#4a90f9"
 
-gtk-color-scheme = "theme_bg_dark_color:#626262\ntheme_fg_dark_color:#E4E4E4\ntheme_text_dark_color:#F5F5F5"
+gtk-color-scheme = "theme_bg_dark_color:#383838\ntheme_fg_dark_color:#C0C0C0\ntheme_text_dark_color:#dddddd"
 gtk-color-scheme = "sidebar_background:#afb8bf"
 
 # link_color:#4a90f9"
@@ -425,7 +425,6 @@ style "entry" = "default" { # text
 }
 
 style "toolbar_entry" = "entry" { # text
-
 	base[NORMAL]			= shade(0.93, @base_color)
 	engine "murrine" {
 		contrast			= 0.6
@@ -466,27 +465,29 @@ style "menubar" {
 	fg[ACTIVE]	        = @selected_fg_color
 	fg[SELECTED]	    = @selected_fg_color
 
+
     bg[NORMAL]          = shade (1.00, @theme_bg_dark_color)
     
 	engine "murrine" {
-		gradient_shades     	= {1.00,0.97,0.97,0.94}
+		gradient_shades     	= {1.00,0.97,0.97,0.94}	
         border_shades 			= {1.1, 0.9}
-		contrast            	= 1.15
+		contrast            	= 1.0
 		lightborderstyle		= 1
 		textstyle               = 1
 		text_shade				= 0.8
 	}
 }
 
+
 style "menu" {
 	xthickness	= 0
 	ythickness	= 0
 	GtkMenuItem::arrow-scaling	= 0.5
 
-	bg[NORMAL]			= shade (0.90, @theme_bg_dark_color)
+	bg[NORMAL]			= shade (0.88, @theme_bg_dark_color)
 
 	engine "murrine" {
-		gradient_shades		= {1.00, 1.0, 1.0, 1.00}
+		gradient_shades		= {1.0, 1.0, 1.0, 1.0}
 		roundness		    = 1 # 0 = squared 
 	}
 }
@@ -495,10 +496,7 @@ style "menu_item_white" {
 	xthickness	= 2
 	ythickness	= 3
 
-    bg[PRELIGHT]      	= shade (1.00, @selected_bg_color)
-    bg[SELECTED]      	= shade (1.00, @selected_bg_color)
-
-	fg[NORMAL] 			= shade (1.00, @theme_fg_dark_color)		# menu item normal
+	fg[NORMAL] 			= shade (0.95, @theme_fg_dark_color)		# menu item normal
     fg[INSENSITIVE] 	= mix(0.60, @theme_fg_dark_color, @theme_bg_dark_color)	    # menu item deshabilitados
 	fg[PRELIGHT]		= @selected_fg_color						# menu item seleccionado
 
@@ -506,29 +504,31 @@ style "menu_item_white" {
 	text[INSENSITIVE] 	= mix(0.60, @theme_text_dark_color, @theme_bg_dark_color)	    
 	text[PRELIGHT]      = @selected_fg_color            			# Color check/radio menu
 
+    bg[PRELIGHT]      	= shade (1.00, @selected_bg_color)
+    bg[SELECTED]      	= shade (1.00, @selected_bg_color)
+
 	engine "murrine" {
         gradient_shades		= {0.90, 0.95, 0.95, 1.00}
 		border_shades 		= {1.40, 1.0}
         roundness           = 1
         contrast            = 0.8           # Contraste separadores
-		textstyle               = 0
+		#textstyle           = 1
+		#text_shade			= 0.7
 	}
 }
 
-style "menubar_menuitem" {
+style "menu_item_black" {
 	xthickness	= 2
 	ythickness	= 3
 
-    bg[NORMAL]          = shade (1.00, @theme_bg_dark_color)
-    bg[SELECTED]      	= shade (1.00, @selected_bg_color)
-
-	fg[NORMAL] 			= shade (1.00, @theme_fg_dark_color)		# menu item normal
-    fg[INSENSITIVE] 	= mix(0.60, @theme_fg_dark_color, @theme_bg_dark_color)	    # menu item deshabilitados
-	fg[PRELIGHT]		= @selected_fg_color						# menu item seleccionado
+	fg[PRELIGHT]	= @selected_fg_color
+    bg[PRELIGHT]      = shade (0.94, @selected_bg_color)
+    bg[SELECTED]      = shade (0.94, @selected_bg_color)
 
 	engine "murrine" {
-		textstyle               = 1
-		text_shade			    = 0.5
+        gradient_shades		= {1.30, 1.15, 1.15, 1.00}
+        roundness           = 1
+        contrast            = 0.0
 	}
 }
 
@@ -557,7 +557,6 @@ style "notebook" {
  
 	}
 }
-
 
 style "progressbar" {
 	xthickness	= 0
@@ -857,7 +856,7 @@ widget_class "*<GtkMenuBar>*"			style "menubar"
 widget_class "*<GtkMenu>*"			    style "menu"
 widget_class "*<GtkMenuItem>*"			style "menu_item_white"
 #widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menu_item_white"
-widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menubar_menuitem"
+#widget_class "*<GtkMenuBar>.<GtkMenuItem>*"	style "menu_item_black"
 
 widget_class "*<GtkToolbar>"                    style "toolbar"
 widget_class "*<GtkHandleBox>"                  style "toolbar"
