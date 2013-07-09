@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="radio-selected.svg"
-   inkscape:export-filename="/usr/share/themes/MediterraneanNightDarkest/gtk-3.0/assets/radio-selected.png"
+   inkscape:export-filename="/usr/share/themes/MediterraneanWhiteNight/gtk-3.0/assets/radio-selected.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -320,11 +320,11 @@
     <linearGradient
        id="linearGradient3841">
       <stop
-         style="stop-color:#30496d;stop-opacity:1;"
+         style="stop-color:#404040;stop-opacity:1;"
          offset="0"
          id="stop3843" />
       <stop
-         style="stop-color:#7c96bc;stop-opacity:1;"
+         style="stop-color:#939393;stop-opacity:1;"
          offset="1"
          id="stop3845" />
     </linearGradient>
@@ -562,7 +562,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="31.621594"
-     inkscape:cx="9.4953141"
+     inkscape:cx="3.8978733"
      inkscape:cy="6.0941284"
      inkscape:document-units="px"
      inkscape:current-layer="g6305"
@@ -590,7 +590,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -605,7 +605,7 @@
        style="display:inline;enable-background:new">
       <path
          transform="matrix(1.6479351,0,0,-1.0184793,-50.232497,533.78025)"
-         d="m 665.47588,255.0668 a 4.5078058,7.2937827 0 1 1 -9.01561,0 4.5078058,7.2937827 0 1 1 9.01561,0 z"
+         d="m 665.47588,255.0668 c 0,4.02825 -2.01821,7.29379 -4.5078,7.29379 -2.48959,0 -4.50781,-3.26554 -4.50781,-7.29379 0,-4.02824 2.01822,-7.29378 4.50781,-7.29378 2.48959,0 4.5078,3.26554 4.5078,7.29378 z"
          sodipodi:ry="7.2937827"
          sodipodi:rx="4.5078058"
          sodipodi:cy="255.0668"
@@ -621,7 +621,7 @@
          sodipodi:cy="255.0668"
          sodipodi:rx="4.5078058"
          sodipodi:ry="7.2937827"
-         d="m 665.47588,255.0668 a 4.5078058,7.2937827 0 1 1 -9.01561,0 4.5078058,7.2937827 0 1 1 9.01561,0 z"
+         d="m 665.47588,255.0668 c 0,4.02825 -2.01821,7.29379 -4.5078,7.29379 -2.48959,0 -4.50781,-3.26554 -4.50781,-7.29379 0,-4.02824 2.01822,-7.29378 4.50781,-7.29378 2.48959,0 4.5078,3.26554 4.5078,7.29378 z"
          transform="matrix(1.4234568,0,0,-0.87974431,98.140483,498.39356)" />
       <path
          sodipodi:type="arc"

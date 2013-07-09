@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="checkbox-mixed.svg"
-   inkscape:export-filename="/usr/share/themes/MediterraneanNightDarkest/gtk-3.0/assets/checkbox-mixed.png"
+   inkscape:export-filename="/usr/share/themes/MediterraneanWhiteNight/gtk-3.0/assets/checkbox-mixed.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <sodipodi:namedview
@@ -33,7 +33,7 @@
      id="namedview21"
      showgrid="true"
      inkscape:zoom="29.5"
-     inkscape:cx="3.0862116"
+     inkscape:cx="-8.9137884"
      inkscape:cy="6.8796585"
      inkscape:window-x="77"
      inkscape:window-y="43"
@@ -228,11 +228,11 @@
     <linearGradient
        id="linearGradient3877">
       <stop
-         style="stop-color:#273c59;stop-opacity:1;"
+         style="stop-color:#404040;stop-opacity:1;"
          offset="0"
          id="stop3879" />
       <stop
-         style="stop-color:#5a7aaa;stop-opacity:1;"
+         style="stop-color:#808080;stop-opacity:1;"
          offset="1"
          id="stop3881" />
     </linearGradient>
