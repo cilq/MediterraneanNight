@@ -238,7 +238,6 @@ GtkSwitch {
     padding: 0;
 }
 
-
 .menu GtkSwitch.trough,
 .toolbar.menubar GtkSwitch.trough,
 .primary-toolbar .toolbar GtkSwitch.trough,
